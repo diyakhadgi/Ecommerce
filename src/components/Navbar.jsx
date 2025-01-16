@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../assets/icon.jpg';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
-const Navbar = () => {
+const Navbar = ({searchQuery, setSearchQuery}) => {
+
   return (
     <nav className='navbar'>
       <div className="logo">
@@ -11,7 +12,7 @@ const Navbar = () => {
       </div>
         <Link to="/"><p style={{color:"#fff"}} className=' playfair-display-head fashion'>Fashion Store</p></Link>
       <div className="search-bar">
-        <input type="text" name="" id="" placeholder='Search...' />
+        <input type="text" name="" id="" placeholder='Search...' value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)}/>
       </div>
       <ul>
       <li><Link to="/">Home</Link></li>

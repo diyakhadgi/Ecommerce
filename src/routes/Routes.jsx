@@ -7,6 +7,7 @@ import Category from '../pages/Category'
 import About from '../pages/About'
 import Contact from '../pages/Contact'
 import Login from '../pages/Login'
+import NotFound from '../NotFound/NotFound'
 
 const Routes = () => {
   return (
@@ -24,6 +25,7 @@ const Routes = () => {
           <Route path="/about" component={ About} exact/> 
           <Route path="/contact" component={ Contact} exact/> 
           <Route path="/login" component={ Login} exact/> 
+          <Route path="/*" component={ NotFound} exact/> 
       </Switch>
       </BrowserRouter>
     </>
