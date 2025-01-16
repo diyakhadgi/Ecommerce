@@ -4,48 +4,23 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-900 text-white shadow-lg">
-      <div className="container mx-auto flex justify-between items-center px-6 py-4">
-        {/* Logo Section */}
-        <div className="flex items-center space-x-4">
-          <img src={logo} alt="Logo" className="h-12 w-12 rounded-full" />
-          <span className="text-3xl font-bold tracking-wide">Fashion Store</span>
-        </div>
-
-        <div>
-          <input type="text" name="" placeholder= "Search" id="" />
-        </div>
-
-        {/* Navigation Links */}
-        <ul className="hidden md:flex space-x-8 text-lg">
-          <Link to="/"><li className="hover:text-gray-300 cursor-pointer">Home</li></Link>
-          <li className="hover:text-gray-300 cursor-pointer">Category</li>
-          <li className="hover:text-gray-300 cursor-pointer">Cart</li>
-          <li className="hover:text-gray-300 cursor-pointer">Login/Register</li>
-        </ul>
-
-
-        {/* Hamburger Menu (for smaller screens) */}
-        <div className="md:hidden">
-          <button>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="2"
-              stroke="currentColor"
-              className="w-8 h-8"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
-          </button>
-        </div>
+    <nav className='navbar'>
+      <div className="logo">
+        <Link to="/"><img src={logo} alt="" height={"50px"} width={"50px"} />
+        </Link>
       </div>
-    </nav>
+        <Link to="/"><p style={{color:"#fff"}} className=' playfair-display-head fashion'>Fashion Store</p></Link>
+      <div className="search-bar">
+        <input type="text" name="" id="" placeholder='Search...' />
+      </div>
+      <ul>
+      <li><Link to="/">Home</Link></li>
+      <li><Link to="/category">Category</Link></li>
+      <li><Link to="/about">About</Link></li>
+      <li><Link to="/contact">Contact</Link></li>
+      <li><Link to="/login">Login</Link></li>
+      </ul>
+  </nav>
   );
 };
 

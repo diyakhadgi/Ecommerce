@@ -3,6 +3,10 @@ import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom/cjs/rea
 import Home from '../pages/Home'
 import Products from '../pages/Products'
 import ViewProduct from '../pages/ViewProduct'
+import Category from '../pages/Category'
+import About from '../pages/About'
+import Contact from '../pages/Contact'
+import Login from '../pages/Login'
 
 const Routes = () => {
   return (
@@ -14,8 +18,12 @@ const Routes = () => {
           <Redirect to="/"/>
           </Route>
           <Route path="/products" component={Products} exact />
-          <Route path="/products/:id" component={ViewProduct} />
-          <Route path="/cart"/>
+          <Route path="/products/:id" component={ViewProduct} exact/>
+          <Route path="/cart" />
+          <Route path="/category" component={ Category} exact/>
+          <Route path="/about" component={ About} exact/> 
+          <Route path="/contact" component={ Contact} exact/> 
+          <Route path="/login" component={ Login} exact/> 
       </Switch>
       </BrowserRouter>
     </>
