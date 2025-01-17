@@ -57,7 +57,7 @@ const Contact = () => {
         ></textarea>{" "}
         <br />
         <br />
-        <button
+        <button onClick={()=> alert('This is just a test')}
           style={{
             border: "1px solid black",
             padding: "8px",
