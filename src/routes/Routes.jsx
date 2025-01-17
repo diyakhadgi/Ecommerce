@@ -8,6 +8,8 @@ import About from '../pages/About'
 import Contact from '../pages/Contact'
 import Login from '../pages/Login'
 import NotFound from '../NotFound/NotFound'
+import Profile from '../pages/Profile'
+import Cart from '../pages/Cart'
 
 const Routes = () => {
   return (
@@ -20,11 +22,12 @@ const Routes = () => {
           </Route>
           <Route path="/products" component={Products} exact />
           <Route path="/products/:id" component={ViewProduct} exact/>
-          <Route path="/cart" />
+          <Route path="/cart" component={ Cart} exact/> 
           <Route path="/category" component={ Category} exact/>
           <Route path="/about" component={ About} exact/> 
           <Route path="/contact" component={ Contact} exact/> 
           <Route path="/login" component={ Login} exact/> 
+          <Route path="/profile" component={ Profile} exact/> 
           <Route path="/*" component={ NotFound} exact/> 
       </Switch>
       </BrowserRouter>
