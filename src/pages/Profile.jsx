@@ -2,8 +2,10 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import Navbar from "../components/Navbar";
+import AuthCheck from "../middleware/AuthCheck";
 
 const Profile = () => {
+  AuthCheck();
   const users = Math.floor(Math.random() * 10);
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
